@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Porsche Atelier India | Sculpted Precision &amp; Bespoke Concierge</title>
+  <meta name="description" content="Porsche Atelier India — Discover iconic Porsche sports cars, electric grand tourers, genuine engineering components, and private concierge allocation booking with Indian Ex-Showroom pricing." />
+
+  <!-- Google Fonts: Cormorant Garamond (Luxury Editorial Serif) & Inter (Crisp UI Sans) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Tailwind Custom Luxury Theme Configuration -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            obsidian: '#0A0A0C',
+            charcoal: '#141418',
+            'charcoal-light': '#1C1C22',
+            gold: '#C9A96E',
+            'gold-light': '#DFC592',
+            'gold-dim': '#8F7444',
+            alabaster: '#F5F3EF',
+            'muted-ink': '#A19D94'
+          },
+          fontFamily: {
+            serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+            sans: ['"Inter"', 'system-ui', '-apple-system', 'sans-serif']
+          },
+          boxShadow: {
+            'luxury': '0 24px 60px -15px rgba(0, 0, 0, 0.75)',
+            'gold-glow': '0 0 30px -5px rgba(201, 169, 110, 0.22)'
+          }
+        }
+      }
+    };
+  </script>
+
+  <!-- Minimal Custom Styles for Range Slider, Scrollbar & Print Pass -->
+  <style>
+    body {
+      background-color: #0A0A0C;
+      color: #F5F3EF;
+      overflow-x: hidden;
+    }
+
+    /* Custom Brushed-Gold Range Slider */
+    input[type="range"].luxury-slider {
+      -webkit-appearance: none;
+      appearance: none;
+      height: 4px;
+      background: rgba(201, 169, 110, 0.25);
+      border-radius: 9999px;
+      outline: none;
+    }
+    input[type="range"].luxury-slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 18px;
+      height: 18px;
+      border-radius: 9999px;
+      background: #C9A96E;
+      border: 2px solid #0A0A0C;
+      box-shadow: 0 0 12px rgba(201, 169, 110, 0.6);
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+    input[type="range"].luxury-slider::-webkit-slider-thumb:hover {
+      transform: scale(1.15);
+    }
+    input[type="range"].luxury-slider::-moz-range-thumb {
+      width: 18px;
+      height: 18px;
+      border-radius: 9999px;
+      background: #C9A96E;
+      border: 2px solid #0A0A0C;
+      cursor: pointer;
+    }
+
+    /* Custom Subtle Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #0A0A0C;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #272730;
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #C9A96E;
+    }
+
+    /* Print Styling for Digital Reservation Pass */
+    @media print {
+      body * {
+        visibility: hidden;
+      }
+      #passPrintableArea, #passPrintableArea * {
+        visibility: visible;
+      }
+      #passPrintableArea {
+        position: fixed;
+        inset: 0;
+        background: #0A0A0C !important;
+        color: #F5F3EF !important;
+        padding: 32px;
+      }
+    }
+  </style>
+</head>
+<body class="font-sans antialiased bg-obsidian text-alabaster selection:bg-gold/30 selection:text-alabaster">
+
+  <!-- ===================================================================== -->
+  <!-- STICKY TRANSPARENT-TO-DARK GLASS NAVIGATION BAR                       -->
+  <!-- ===================================================================== -->
+  <header id="mainHeader" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500 border-b border-transparent">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10">
+      <div class="flex items-center justify-between h-20">
+        <!-- Brand Identity -->
+        <a href="#top" class="flex items-center gap-3.5 group focus:outline-none">
+          <!-- Minimalist Shield Emblem SVG -->
+          <div class="w-9 h-9 rounded-xl border border-gold/40 bg-charcoal/80 flex items-center justify-center group-hover:border-gold transition-colors">
+            <svg class="w-5 h-5 text-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">
+              <path d="M12 2.5L4.5 5.5V11.8C4.5 16.6 7.7 20.6 12 22C16.3 20.6 19.5 16.6 19.5 11.8V5.5L12 2.5Z" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M12 2.5V22M4.5 11.5H19.5" stroke-opacity="0.45" />
+              <circle cx="12" cy="11.5" r="2.2" fill="currentColor" fill-opacity="0.25" />
+            </svg>
+          </div>
+          <div class="flex flex-col">
+            <span class="font-serif text-lg sm:text-xl tracking-[0.22em] font-semibold text-alabaster uppercase leading-none">
+              Porsche Atelier
+            </span>
+            <span class="text-[10px] tracking-[0.38em] text-gold uppercase mt-1 font-medium">
+              India
+            </span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden md:flex items-center gap-9" aria-label="Primary Navigation">
+          <a href="#collection" class="text-xs uppercase tracking-[0.2em] text-alabaster/80 hover:text-gold transition-colors py-2">Collection</a>
+          <a href="#heritage" class="text-xs uppercase tracking-[0.2em] text-alabaster/80 hover:text-gold transition-colors py-2">Heritage</a>
+          <a href="#engineering" class="text-xs uppercase tracking-[0.2em] text-alabaster/80 hover:text-gold transition-colors py-2">Engineering &amp; Parts</a>
+          <a href="#booking" class="text-xs uppercase tracking-[0.2em] text-alabaster/80 hover:text-gold transition-colors py-2">Private Booking</a>
+        </nav>
+
+        <!-- Right CTA & Mobile Menu Toggle -->
+        <div class="flex items-center gap-3">
+          <a href="#booking" class="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gold/15 border border-gold/50 text-gold text-xs uppercase tracking-[0.18em] font-medium hover:bg-gold hover:text-obsidian transition-all duration-300">
+            <span>Reserve</span>
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </a>
+
+          <!-- Mobile Hamburger Button -->
+          <button id="mobileMenuBtn" type="button" aria-label="Toggle Navigation Menu" class="md:hidden p-2.5 rounded-xl border border-white/10 bg-charcoal/80 text-alabaster hover:border-gold/50 transition-colors">
+            <svg id="hamburgerIcon" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 7h16M4 12h16M4 17h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Slide-Down Drawer -->
+    <div id="mobileMenu" class="hidden md:hidden bg-obsidian/95 backdrop-blur-xl border-b border-white/10 px-6 py-6">
+      <div class="flex flex-col space-y-4">
+        <a href="#collection" class="mobile-nav-link text-sm uppercase tracking-[0.2em] text-alabaster/90 hover:text-gold py-2">Collection</a>
+        <a href="#heritage" class="mobile-nav-link text-sm uppercase tracking-[0.2em] text-alabaster/90 hover:text-gold py-2">Heritage</a>
+        <a href="#engineering" class="mobile-nav-link text-sm uppercase tracking-[0.2em] text-alabaster/90 hover:text-gold py-2">Engineering &amp; Parts</a>
+        <a href="#booking" class="mobile-nav-link text-sm uppercase tracking-[0.2em] text-alabaster/90 hover:text-gold py-2">Private Booking</a>
+        <a href="#booking" class="mobile-nav-link mt-2 inline-flex justify-center items-center gap-2 px-5 py-3 rounded-xl bg-gold text-obsidian text-xs uppercase tracking-[0.2em] font-semibold">
+          Reserve Concierge Viewing
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===================================================================== -->
+  <!-- HERO SECTION — FULL-BLEED PORSCHE 911 PHOTOGRAPH (#1 OF 6)            -->
+  <!-- ===================================================================== -->
+  <section id="top" class="relative min-h-screen flex flex-col justify-between pt-28 pb-12 overflow-hidden">
+    <!-- Background Porsche 911 Image (Photo #1 of 6 unique Porsche photos) -->
+    <div class="absolute inset-0 z-0 bg-charcoal">
+      <img
+        src="https://images.unsplash.com/photo-1614162692292-7ac56d7f7f1e?auto=format&fit=crop&w=1920&q=85"
+        alt="Porsche 911 in obsidian studio lighting"
+        class="w-full h-full object-cover object-center scale-[1.02]"
+        onerror="this.onerror=null;this.src='https://placehold.co/1920x1080/141418/C9A96E?text=Porsche+911+%7C+Porsche+Atelier+India';"
+      />
+      <!-- Multi-layered Luxury Hospitality Vignette -->
+      <div class="absolute inset-0 bg-gradient-to-r from-obsidian/95 via-obsidian/70 to-obsidian/35"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-obsidian via-transparent to-obsidian/65"></div>
+    </div>
+
+    <!-- Main Hero Copy -->
+    <div class="relative z-10 max-w-7xl w-full mx-auto px-5 sm:px-8 lg:px-10 my-auto py-12">
+      <div class="max-w-2xl">
+        <div class="inline-flex items-center gap-3 px-4 py-1.5 rounded-full bg-charcoal/75 backdrop-blur-md border border-gold/30 mb-7">
+          <span class="w-1.5 h-1.5 rounded-full bg-gold"></span>
+          <span class="text-[11px] uppercase tracking-[0.28em] text-gold font-medium">Stuttgart Craftsmanship &bull; Curated For India</span>
+        </div>
+
+        <h1 class="font-serif text-5xl sm:text-6xl lg:text-7xl font-medium text-alabaster leading-[1.06] tracking-tight">
+          Sculpted Precision.<br />
+          <span class="italic text-gold-light font-normal">Timeless Velocity.</span>
+        </h1>
+
+        <p class="mt-6 text-base sm:text-lg text-alabaster/75 font-light leading-relaxed max-w-xl">
+          Experience the pinnacle of Zuffenhausen engineering through private lounge consultations, bespoke Exclusive Manufaktur commissions, and priority India allocations.
+        </p>
+
+        <div class="mt-9 flex flex-wrap items-center gap-4">
+          <a href="#collection" class="inline-flex items-center gap-3 px-7 py-4 rounded-xl bg-gold text-obsidian text-xs uppercase tracking-[0.2em] font-semibold hover:bg-gold-light transition-all duration-300 shadow-gold-glow">
+            <span>Explore The Collection</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3"/></svg>
+          </a>
+          <a href="#booking" class="inline-flex items-center gap-3 px-7 py-4 rounded-xl bg-charcoal/80 backdrop-blur-md border border-white/15 text-alabaster text-xs uppercase tracking-[0.2em] font-medium hover:border-gold/60 hover:text-gold transition-all duration-300">
+            <span>Private Concierge Booking</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Luxury Key Figures Bar -->
+    <div class="relative z-10 max-w-7xl w-full mx-auto px-5 sm:px-8 lg:px-10 pt-8">
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 p-5 sm:p-6 rounded-2xl bg-charcoal/75 backdrop-blur-xl border border-white/10">
+        <div class="px-2">
+          <p class="text-[10px] uppercase tracking-[0.24em] text-muted-ink">Portfolio India</p>
+          <p class="font-serif text-2xl sm:text-3xl text-alabaster mt-1">6 Iconic Models</p>
+        </div>
+        <div class="px-2 border-l border-white/10">
+          <p class="text-[10px] uppercase tracking-[0.24em] text-muted-ink">Ex-Showroom Starting</p>
+          <p class="font-serif text-2xl sm:text-3xl text-gold mt-1">&#8377;89.65 Lakh<span class="text-sm text-muted-ink">*</span></p>
+        </div>
+        <div class="px-2 lg:border-l border-white/10">
+          <p class="text-[10px] uppercase tracking-[0.24em] text-muted-ink">Hospitality Network</p>
+          <p class="font-serif text-2xl sm:text-3xl text-alabaster mt-1">9 Indian Centres</p>
+        </div>
+        <div class="px-2 border-l border-white/10">
+          <p class="text-[10px] uppercase tracking-[0.24em] text-muted-ink">Peak Electric Output</p>
+          <p class="font-serif text-2xl sm:text-3xl text-alabaster mt-1">Up to 872 bhp</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================== -->
+  <!-- THE STUTTGART LEGACY — ABOUT PORSCHE (EXACTLY 5 EDITORIAL LINES)      -->
+  <!-- ===================================================================== -->
+  <section id="heritage" class="relative py-24 sm:py-28 border-t border-white/5 bg-obsidian">
+    <div class="max-w-4xl mx-auto px-5 sm:px-8 text-center">
+      <p class="text-xs uppercase tracking-[0.34em] text-gold font-medium">The Stuttgart Legacy</p>
+      <h2 class="font-serif text-4xl sm:text-5xl font-medium text-alabaster mt-3 tracking-tight">
+        Born on the Circuit, Perfected for Eternity
+      </h2>
+
+      <!-- Brushed Gold Ornamental Divider -->
+      <div class="flex items-center justify-center gap-4 my-8">
+        <span class="h-px w-16 bg-gradient-to-r from-transparent to-gold/70"></span>
+        <span class="w-2 h-2 rotate-45 border border-gold"></span>
+        <span class="h-px w-16 bg-gradient-to-l from-transparent to-gold/70"></span>
+      </div>
+
+      <!-- Exactly 5 Crisp, Evocative Lines About Porsche -->
+      <div class="space-y-3.5 text-base sm:text-lg lg:text-xl font-serif italic text-alabaster/90 leading-relaxed max-w-3xl mx-auto">
+        <p>Founded in Stuttgart in 1948, Porsche was born from Ferry Porsche’s relentless vision to build the sports car he could not find.</p>
+        <p>Every silhouette is sculpted by wind-tunnel aerodynamics and forged with uncompromising German mechanical precision.</p>
+        <p>With over 30,000 motorsport victories—including nineteen overall triumphs at Le Mans—racing DNA pulses through every chassis.</p>
+        <p>From the unmistakable harmony of the rear-mounted flat-six to pioneering 800-volt electric performance, innovation honours tradition.</p>
+        <p>More than an automobile, a Porsche is an heirloom of timeless luxury, tactile poise, and deeply personal craftsmanship.</p>
+      </div>
+
+      <div class="mt-10 flex flex-wrap justify-center gap-8 text-xs uppercase tracking-[0.24em] text-muted-ink">
+        <span>Est. 1948 &bull; Zuffenhausen</span>
+        <span class="text-gold/40">|</span>
+        <span>19&times; Le Mans Champions</span>
+        <span class="text-gold/40">|</span>
+        <span>Exclusive Manufaktur Bespoke</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================== -->
+  <!-- THE COLLECTION — 6 PORSCHE MODELS WITH INDIAN EX-SHOWROOM PRICING     -->
+  <!-- ===================================================================== -->
+  <section id="collection" class="py-24 bg-charcoal/40 border-t border-white/5">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10">
+      <!-- Section Header & Interactive Category Filters -->
+      <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-14">
+        <div>
+          <p class="text-xs uppercase tracking-[0.32em] text-gold font-medium">The India Collection</p>
+          <h2 class="font-serif text-4xl sm:text-5xl font-medium text-alabaster mt-2.5 tracking-tight">
+            Six Icons of Performance
+          </h2>
+          <p class="text-sm sm:text-base text-muted-ink mt-3 max-w-xl font-light">
+            Explore our curated Indian portfolio with transparent Ex-Showroom pricing, detailed technical dossiers, and instant concierge allocation selection.
+          </p>
+        </div>
+
+        <!-- Category Filter Pills -->
+        <div id="categoryFilters" class="flex flex-wrap gap-2.5" role="tablist" aria-label="Filter Porsche Models">
+          <button type="button" data-filter="all" class="filter-btn px-5 py-2.5 rounded-xl text-xs uppercase tracking-[0.18em] font-medium transition-all bg-gold text-obsidian border border-gold">
+            All Models
+          </button>
+          <button type="button" data-filter="sports" class="filter-btn px-5 py-2.5 rounded-xl text-xs uppercase tracking-[0.18em] font-medium transition-all bg-charcoal text-alabaster/80 border border-white/10 hover:border-gold/50 hover:text-gold">
+            Sports &amp; GT
+          </button>
+          <button type="button" data-filter="electric" class="filter-btn px-5 py-2.5 rounded-xl text-xs uppercase tracking-[0.18em] font-medium transition-all bg-charcoal text-alabaster/80 border border-white/10 hover:border-gold/50 hover:text-gold">
+            Electric
+          </button>
+          <button type="button" data-filter="suv" class="filter-btn px-5 py-2.5 rounded-xl text-xs uppercase tracking-[0.18em] font-medium transition-all bg-charcoal text-alabaster/80 border border-white/10 hover:border-gold/50 hover:text-gold">
+            Luxury SUVs
+          </button>
+        </div>
+      </div>
+
+      <!-- Responsive 3-Column Desktop Grid (Populated via JS) -->
+      <div id="modelsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
+        <!-- Cards rendered dynamically by script -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================== -->
+  <!-- PRECISION COMPONENTS & GENUINE PARTS — ENGINEERING ANATOMY            -->
+  <!-- ===================================================================== -->
+  <section id="engineering" class="py-24 bg-obsidian border-t border-white/5">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10">
+      <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-14">
+        <div>
+          <p class="text-xs uppercase tracking-[0.32em] text-gold font-medium">Engineering Anatomy</p>
+          <h2 class="font-serif text-4xl sm:text-5xl font-medium text-alabaster mt-2.5 tracking-tight">
+            Precision Components &amp; Genuine Parts
+          </h2>
+          <p class="text-sm sm:text-base text-muted-ink mt-3 max-w-2xl font-light">
+            Every Porsche is a symphony of proprietary Weissach-developed assemblies. Select any genuine component below to inspect its mechanical architecture and performance role.
+          </p>
+        </div>
+        <div class="inline-flex items-center gap-2.5 px-4 py-2.5 rounded-xl bg-charcoal border border-gold/25 text-xs text-gold tracking-wider uppercase">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+          <span>Porsche Genuine Parts Certified</span>
+        </div>
+      </div>
+
+      <!-- 8 Genuine Porsche Parts Grid (Populated via JS with Custom SVGs) -->
+      <div id="partsGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <!-- Part cards rendered dynamically -->
+      </div>
+
+      <!-- Active Component Engineering Spotlight Panel -->
+      <div id="partSpotlight" class="mt-8 p-6 sm:p-8 rounded-2xl bg-charcoal border border-gold/30 shadow-luxury transition-all">
+        <!-- Populated dynamically on click / load -->
+      </div>
+    </
